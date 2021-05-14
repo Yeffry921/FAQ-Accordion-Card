@@ -1,0 +1,31 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 375px;
+  padding: 50px 20px;
+}
+
+.accordion {
+  background-color: #fff;
+  padding: 100px 50px 50px 50px;
+  border-radius: 15px;
+}
+
+.accordion h1 {
+  text-align: center;
+  margin-top: 2rem;
+}
+.accordion__content {
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+.bg-purple {
+  background: linear-gradient(hsl(273, 75%, 66%),
+  hsl(240, 73%, 65%));
+}
