@@ -4,6 +4,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Kumbh Sans', sans-serif;;
 }
 
 .container {
@@ -24,6 +25,18 @@ body {
 }
 .accordion__content {
   border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+.accordion__question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.accordion__question p {
+  margin: 0;
+}
+.accordion__question img {
+  align-self: start;
+  margin: .5rem .5rem
 }
 .bg-purple {
   background: linear-gradient(hsl(273, 75%, 66%),
