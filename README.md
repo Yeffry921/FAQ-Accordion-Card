@@ -1,4 +1,6 @@
 # Frontend Mentor - FAQ accordion card
+https://yeffry921.github.io/FAQ-Accordion-Card/
+
 
 ![Design preview for the FAQ accordion card coding challenge](./design/desktop-preview.jpg)
 
