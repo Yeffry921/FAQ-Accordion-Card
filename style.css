@@ -27,7 +27,6 @@ body {
 
 .accordion {
   background-color: #fff;
-  padding: 20px;
   border-radius: 15px;
   width: 320px;
   height: 505px;
@@ -35,7 +34,20 @@ body {
 }
 
 .accordion__logo {
-  margin-bottom: 1.5rem;
+  margin-bottom: 5.5rem;
+  position: relative;
+  height: 3rem;
+}
+.accordion__logo img {
+  margin: 0 auto;
+  display: block;
+}
+
+.accordion__logo .woman-mobile {
+  position: relative;
+  top: -13rem;
+  display: block;
+  right: 1rem;
 }
 
 .accordion__answer {
@@ -64,6 +76,7 @@ body {
 
 .accordion__content {
   margin-top: 2.5rem;
+  padding: 20px;
 }
 
 .accordion__item {
