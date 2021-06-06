@@ -1,44 +1,34 @@
-var questions = document.querySelectorAll('.question');
-var answers = document.querySelectorAll('.accordion__answer');
+const accordion = document.querySelector('.accordion__content');
+const answers = accordion.querySelectorAll('.accordion__answer');
 
-questions.forEach((question) => {
-	question.addEventListener('click', (e) => {
-		if (e.target.className === 'question') {
-			const panelAnswer = e.target.parentElement.nextElementSibling;
-			togglePanel(panelAnswer);
-		}
+accordion.addEventListener('click', (e) => {
+	if (e.target.className === 'question') {
+		// Grab the answer panel of question clicked
+		const panel = e.target.parentElement.nextElementSibling;
+		showPanel(panel);
+		// If its open, close it, else do nothing
+	}
 
-		if (e.target.className === 'toggler') {
-			const panelAnswer = e.target.parentElement.parentElement.nextElementSibling;
-			togglePanel(panelAnswer);
-		}
-	});
+	if (e.target.className === 'toggler') {
+		const panel = e.target.parentElement.parentElement.nextElementSibling;
+		showPanel(panel);
+	}
 });
 
-function removeClassesFromNode(node, className) {
-	node.forEach((answer) => {
-		answer.classList.remove(className);
-	});
-}
+function showPanel(panel) {
+	panel.parentElement.querySelector('.toggler');
 
-function addClassToNode(node, className) {
-	node.classList.add(className);
-}
-
-function checkAndRemoveClassFromNode(node, className) {
-	if (node.classList.contains(className)) {
-		node.classList.remove(className);
-		return true;
-	}
-	return false;
-}
-
-function togglePanel(panelAnswer) {
-	if (checkAndRemoveClassFromNode(panelAnswer, 'active')) {
+	if (panel.classList.contains('active')) {
+		panel.classList.remove('active');
+		panel.parentElement.querySelector('.toggler').classList.remove('active');
 		return;
+	} 
+  
+	for (let i = 0; i < answers.length; i++) {
+			answers[i].classList.remove('active');
+			document.querySelectorAll('.toggler')[i].classList.remove('active');
 	}
-
-	removeClassesFromNode(answers, 'active');
-
-	addClassToNode(panelAnswer, 'active');
+	
+	panel.classList.add('active');
+	panel.parentElement.querySelector('.toggler').classList.add('active');
 }
